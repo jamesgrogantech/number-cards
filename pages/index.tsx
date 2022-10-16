@@ -7,8 +7,8 @@ import { MdExpandLess, MdExpandMore } from "react-icons/md";
 const Home: NextPage = () => {
   const [start, setStart] = useState(1000);
   const [end, setEnd] = useState(1250);
-  const [fontSize, setFontSize] = useState(30);
-  const [withLines, setWithLines] = useState(true);
+  const [fontSize, setFontSize] = useState(100);
+  const [withLines, setWithLines] = useState(false);
   const [expanded, setExpanded] = useState(false);
   return (
     <div>
