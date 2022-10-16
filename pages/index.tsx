@@ -59,17 +59,16 @@ const Home: NextPage = () => {
           >
             Download
           </button>
-          <button>
-            {expanded ? (
-              <MdExpandLess onClick={() => setExpanded(false)} />
-            ) : (
-              <MdExpandMore onClick={() => setExpanded(true)} />
-            )}
+          <button onClick={() => setExpanded(!expanded)}>
+            <div className="flex gap-2 items-center">
+              {expanded ? <MdExpandLess /> : <MdExpandMore />}
+              Advanced
+            </div>
           </button>
           {expanded && (
             <div className="w-full">
               <hr />
-              <div className="flex gap-6 mt-6">
+              <div className="flex gap-6 mt-6 flex-wrap">
                 <div className="flex items-center gap-2">
                   <label htmlFor="fontSize" className="text-lg">
                     Font Size
